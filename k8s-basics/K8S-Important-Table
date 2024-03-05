@@ -1,0 +1,24 @@
+
++--------------------------+----------------------------+------------------------------------------+
+| Kind                     | Common Fields              | Additional Fields                        |
++--------------------------+----------------------------+------------------------------------------+
+| Pod                      | apiVersion, kind, metadata | spec (containers, volumes)               |
+| Service                  | apiVersion, kind, metadata | spec (selector, ports)                   |
+| ReplicationController    | apiVersion, kind, metadata | spec (replicas, selector, template)      |
+| Deployment               | apiVersion, kind, metadata | spec (replicas, selector, template, strategy) |
+| StatefulSet              | apiVersion, kind, metadata | spec (replicas, selector, template)      |
+| DaemonSet                | apiVersion, kind, metadata | spec (selector, template)                |
+| Job                      | apiVersion, kind, metadata | spec (completions, template)             |
+| ConfigMap                | apiVersion, kind, metadata | data                                   |
+| Secret                   | apiVersion, kind, metadata | data                                   |
+| ServiceAccount           | apiVersion, kind, metadata | automountServiceAccountToken            |
+| Ingress                  | apiVersion, kind, metadata | spec (rules, tls)                       |
+| PersistentVolume         | apiVersion, kind, metadata | spec (capacity, accessModes, storageClassName) |
+| PersistentVolumeClaim    | apiVersion, kind, metadata | spec (accessModes, storageClassName)    |
+| Namespace                | apiVersion, kind, metadata |                                        |
+| Role                     | apiVersion, kind, metadata | rules                                  |
+| RoleBinding              | apiVersion, kind, metadata | subjects, roleRef                       |
+| ClusterRole              | apiVersion, kind, metadata | rules                                  |
+| ClusterRoleBinding       | apiVersion, kind, metadata | subjects, roleRef                       |
+| CustomResourceDefinition | apiVersion, kind, metadata | spec (names, scope, versions)           |
++--------------------------+----------------------------+------------------------------------------+
